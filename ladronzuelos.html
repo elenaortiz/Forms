@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladronzuelos de bicicletas</title>
+</head>
+<body>
+    <h1>Los ladronzuelos de bicicletas</h1>
+    <form action="/action_police.php">   
+    <table>
+        <tr>
+            <td>
+                <label for="day">Día:</label>
+            </td>
+            <td>
+                <input type="date" id="day" name="day">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="appt">Hora:</label></td>
+            <td><input type="time" id="appt" name="appt"></td>
+        </tr>
+        <tr>
+            <td><label for="bikeColor">Color de la bicicleta:</label></td>
+            <td><input type="color" id="bikeColor" name="bikeColor"></td>
+        </tr>
+        <tr>
+            <td><label for="priceRange">Rango de precio (entre 50 y 5000):</label></td>
+            <td><input type="range" id="priceRange" name="priceRange" min="50" max="5000"></td>
+        </tr>
+        <tr>
+            <td><label for="bikeTypes">Tipo de bicicletas:</label></td>
+        <td><select id="bikeTypes">
+              <optgroup label="Paseo">
+                <option value="">--Selecciona el tipo de bicibleta--</option>
+                <option value="senorial">Se&ntilde;orial</option>
+                <option value="antiplebeyos">Anti-plebeyos</option>
+                <option value="porEncimaDelHombro">PorEncimaDelHombro</option>
+              </optgroup>
+              <optgroup label="Monta&ntilde;a">
+                <option value="gamusinos">Gamusinos</option>
+                <option value="huelefloresPremium">Hueleflores premium</option>
+                <option value="fangoLover">PorEncimaDelHombro</option>
+              </optgroup>
+              <optgroup label="Carreras">
+                <option value="metroymedio">Metroymedio</option>
+                <option value="3DeLaTarde">3 de la tarde. Flourescente edition </option>
+                <option value="grupitors">Grupitors</option>
+              </optgroup>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="ruedines">Accesorios:</label></td>
+            <td>
+                <input type="checkbox" id="ruedines" name="ruedines">Ruedines <br>
+                <input type="checkbox" id="pegatinas" name="pegatinas">Pegatinas <br>
+                <input type="checkbox" id="cestita" name="cestita">Cestita <br>
+                <input type="checkbox" id="bombadeaire" name="bombadeaire">Bomba de aire <br>
+                <input type="checkbox" id="timbre" name="timbre">Timbre <br>
+                <input type="checkbox" id="foco" name="foco">Foco <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>¿Qué marca era?</h2>
+              </td>
+              <td>
+                <input list="bikeBrands" name="bikeBrands">
+                <datalist id="bikeBrands">
+                  <option value="specialized">
+                  <option value="trek">
+                  <option value="merida">
+                  <option value="scott">
+                  <option value="giant">
+                  <option value="cube">
+                  <option value="lapierre">
+                  <option value="orbea">
+                  <option value="cannondale">
+                  <option value="bmc">
+                  <option value="canyon">
+                  <option value="look">
+                  <option value="protek">
+                  <option value="megamo">
+                  <option value="pinarello">
+                  <option value="bianchi">
+                  <option value="bh">
+                  <option value="factor">
+                  <option value="ghost">
+                  <option value="cervelo">
+                  <option value="argon">
+                  </datalist>
+              </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Registrarme">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

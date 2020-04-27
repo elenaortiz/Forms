@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WallFace - Registro</title>
+</head>
+<body>
+    <!--(h1)+(table>tr*8>td*2)-->
+    <!--(h1)+(table>tr*3>td*2)-->
+
+<!--Formulario:
+Destino: action
+Método de envío: GET /POST
+Datos: input
+Botón para enviar
+-->
+
+    <h1>Registro gratis</h1>
+    <form action="/registerUser" method="POST">
+    <table>
+        <tr>
+            <td>
+                <label for="userName">Nombre</label>
+            </td>
+            <td>
+                <input type="text" id="userName" name="userName" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="UserPass">Contrase&ntilde;a</label>
+            </td>
+            <td>
+                <input type="password" id="userPass" name="userPass" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="genderM">Género</label>
+            </td>
+            <td>
+                Mujer<input type="radio" id="genderM" name="gender" value="M" required>
+                Hombre<input type="radio" id="genderH" name="gender" value="H" required>
+                Otro<input type="radio" id="genderO" name="gender"value="O" required=>
+            </td>
+        </tr>
+        <!--El name es igual dentro del radio, es como si fuera el mismo, 3 radios de una opción-->
+        <!--input[type=checkbox]-->
+        <!--input[colspan=2]-->
+        <!--Lo que quiere recibir backend, lo que se va a enviar cuando se envíe-->
+
+        
+        <tr>
+            <td>
+              <label for="country">País</label>
+            </td>
+            <td>
+                <select name="country" id="country">
+                <option value="">-- Selecciona tu país --</option>
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+                <option value="ja">Japón</option>
+            </select>
+            </td>
+        </tr>
+        <!--radio pocas opciones, select para muchas.
+        El select por defecto te pone la primera opción
+    data list: para elegir opción escribiendo la inicial-->
+        <tr>
+            <td>Tus aficciones</td>
+            <td>
+                <input type="checkbox" id="hobby1" name="hobby1">Cine <br>
+                <input type="checkbox" id="hobby2" name="hobby2">Series <br>
+                <input type="checkbox" id="hobby3" name="hobby3">Música <br>
+                <input type="checkbox" id="hobby4" name="hobby4">Huevos Fabergé <br>
+            </td>
+        </tr>
+
+        <!--checkbox: puedes elegir varias opciones-->
+        <tr>
+            <td>
+                <label for="comments">Comentarios</label> 
+            </td>
+            <td>
+                <textarea id="comments" name="commments" placeholder="Escribe aquí"></textarea>
+            </td>
+        </tr>
+
+        <!--textarea es el único que me permite recoger saltos de linea, en cualquir otra área se envía. Buena costumbre acotar el número de caracteres
+        placeholder: una ayuda para el usuario par que sepa lo que tiene que meter ahí dentro
+        algunos inputs nuevos de html5 que no los soprotan todos los navegadores y pintaría texto
+        Cuando se definio el textarea, que no había css-->
+
+        <tr>
+            <td>
+            </td>
+            <td><input type="checkbox" id="accept" name="accept" value="ok" required>
+                (*) Acepto las condiciones patatín patatán
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Registrarme">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
